@@ -17,15 +17,25 @@ O **Gestor de Senhas** é uma aplicação simples e eficiente para gerenciar log
 - Pacotes listados no arquivo `requirements.txt`
 
 ## Instalação
-1. Clone o repositório ou baixe o código fonte.
-2. Instale as dependências executando:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Execute o programa:
-   ```bash
-   python app.py
-   ```
+
+### 1. **Instalar o Python**
+Certifique-se de ter o Python 3.8 ou superior instalado:
+- **Windows**: Baixe o instalador em [python.org/downloads](https://www.python.org/downloads) e marque a opção **"Add Python to PATH"**.
+- **Linux**: Use o gerenciador de pacotes (exemplo para Ubuntu: `sudo apt install python3 python3-pip`).
+- **macOS**: Use o `brew` (`brew install python`) ou baixe no site oficial.
+
+### 2. **Instalar as Dependências do Projeto**
+No diretório do projeto:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. **Criar o Executável (Opcional)**
+Para criar o executável:
+```bash
+pyinstaller --onefile -w app.py
+```
+O executável será gerado na pasta `dist/`.
 
 ## Como Usar
 1. Configure as coordenadas de preenchimento automático na aba "Configurações".

@@ -1,2 +1,6 @@
-/ambiente
-/src
+/ambiente/
+/src/
+/build/
+/dist/
+*.spec
+*.log
