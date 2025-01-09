@@ -394,6 +394,12 @@ class PasswordManagerApp(ctk.CTk):
         new_theme = "Light" if current_theme == "Dark" else "Dark"
         ctk.set_appearance_mode(new_theme)
         self.config["theme"] = new_theme
+        
+        if not self.config.get("account_coords") or not self.config.get("password_coords"):
+            loaded_config = load_config()
+            self.config["account_coords"] = loaded_config.get("account_coords")
+            self.config["password_coords"] = loaded_config.get("password_coords")
+
         save_config(self.config)
 
     def perform_login(self, account):
